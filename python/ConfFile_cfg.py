@@ -1,0 +1,126 @@
+import FWCore.ParameterSet.Config as cms
+
+fileList= [
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_0.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_1.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_10.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_11.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_12.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_13.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_14.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_15.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_16.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_17.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_18.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_19.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_2.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_20.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_21.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_22.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_23.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_24.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_25.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_26.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_27.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_28.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_29.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_3.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_30.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_32.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_33.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_34.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_35.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_36.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_37.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_38.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_39.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_4.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_40.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_41.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_42.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_43.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_44.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_45.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_46.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_47.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_48.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_49.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_5.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_50.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_51.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_52.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_53.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_54.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_55.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_56.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_57.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_58.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_59.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_6.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_61.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_62.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_63.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_64.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_65.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_66.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_67.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_68.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_69.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_7.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_70.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_71.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_72.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_73.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_74.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_75.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_76.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_77.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_78.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_79.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_8.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_80.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_81.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_82.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_83.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_84.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_85.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_86.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_87.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_88.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_89.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_9.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_90.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_91.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_92.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_93.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_94.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_95.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_96.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_97.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_98.root",
+	"/store/user/amarini/mc/batch/NuGun_pythia8_TuneCUETP8M2_v2/RunII76XDR/AODSIM/step12_76x_99.root"
+	]
+
+process = cms.Process("Demo")
+
+process.load("FWCore.MessageService.MessageLogger_cfi")
+
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
+
+process.source = cms.Source("PoolSource",
+    # replace 'myfile.root' with the source file you want to use
+    fileNames = cms.untracked.vstring(fileList) ,
+    duplicateCheckMode =  cms.untracked.string("noDuplicateCheck")
+)
+
+process.TFileService = cms.Service("TFileService",
+        closeFileFast = cms.untracked.bool(True),
+        fileName = cms.string("Ntuples.root"),
+        )
+
+process.demo = cms.EDAnalyzer('Npv'
+)
+
+
+process.p = cms.Path(process.demo)
+
